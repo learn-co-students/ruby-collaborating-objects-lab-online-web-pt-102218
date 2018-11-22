@@ -1,10 +1,15 @@
 class Song
 
+<<<<<<< HEAD
   attr_accessor :name , :artist
+=======
+  attr_accessor
+>>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
 
   @@all = []
 
   def initialize(title)
+<<<<<<< HEAD
     @name = title
     @@all << self
   end
@@ -26,5 +31,12 @@ class Song
 
 
   end
+=======
+    @title = title
+    @@all << self
+  end
+
+
+>>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
 
 end
