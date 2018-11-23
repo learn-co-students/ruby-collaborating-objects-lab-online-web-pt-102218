@@ -1,20 +1,23 @@
+require "pry"
+
 class MP3Importer
 
   attr_accessor :path, :filename
 
   def initialize(path)
     @path = path
+    @list_of_files = []
   end
 
 def files
-  binding.pry
   Dir.chdir(@path)
-  filename = Dir.glob("*.mp3")
+  filenames = Dir.glob("*.mp3")
+  @list_of_files << filenames
+binding.pry
 end
 
-def import(filename)
+def import(filenames)
 
-  Song.new_by_filename(some_filename)
 
 end
 
