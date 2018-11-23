@@ -5,9 +5,9 @@ class MP3Importer
     @path = path
   end
 
-  def path
-    @path
-  end
+  # def path
+  #   @path
+  # end
 
   def files
     Dir.chdir(@path) do | path |

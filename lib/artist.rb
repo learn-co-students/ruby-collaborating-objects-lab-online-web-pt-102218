@@ -2,22 +2,14 @@ require 'pry'
 class Artist
 
   attr_accessor :name, :songs
-<<<<<<< HEAD
 
-=======
->>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
   @@all = []
   def initialize(name)
     @name = name
     @songs = []
-<<<<<<< HEAD
-  #  @@all << self
-  end
-
-=======
     @@all << self
   end
->>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
+
   def add_song(song)
     @songs << song
   end
@@ -36,11 +28,7 @@ class Artist
 
   def self.create_by_name(name)
     create_artist_by_name = Artist.new(name)
-<<<<<<< HEAD
     @@all << create_artist_by_name
-=======
-    @@all << self
->>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
     create_artist_by_name
   end
 
@@ -49,7 +37,6 @@ class Artist
   end
 
   def print_songs
-<<<<<<< HEAD
     # Artist.all.each do |artist|
     #   artist.songs.each do |song|
     #     puts song.name
@@ -60,11 +47,4 @@ class Artist
       puts song.name
     end
   end
-
-
-
-=======
-    binding.pry
-  end
->>>>>>> e1744eba359f3ca9d52c5440a54f5241511d42b1
 end
