@@ -24,13 +24,8 @@ class Artist
   end
 
   def self.find_or_create_by_name(name)
-    found_artist = self.all.find{|artist| artist.name == name}
-
-    if found_artist
-      found_artist
-    else
-      Artist.new(name)
-    end
+    self.all.find{|artist| artist.name == name} ? self.all.find{|artist| artist.name == name} : self.new(name).tap {|artist| artist.save}
+    #self.find(name) ? self.find(name) : self.create(name) You could have done this if you had a find and a create method separately
   end
 
   def print_songs
@@ -38,5 +33,7 @@ class Artist
       puts song.name
     end
   end
+
+
 
 end
