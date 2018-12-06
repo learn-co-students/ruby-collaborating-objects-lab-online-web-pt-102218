@@ -20,6 +20,7 @@ class Song
    song = Song.new(song_name)
    artist = Artist.find_or_create_by_name(artist_name)
    artist.songs << song
+   binding.pry
    song
  end
 
